@@ -52,3 +52,5 @@ Mkfile.old
 dkms.conf
 outdir/
 api/
+ext_src/
+config.mk
