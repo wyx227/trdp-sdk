@@ -1,0 +1,15 @@
+
+ARCH = MACOS
+TARGET_VOS = posix
+TARGET_OS = LINUX
+TCPREFIX = 
+TCPOSTFIX = 
+DOXYPATH = /usr/local/bin/
+
+# the _GNU_SOURCE is needed to get the extended poll feature for the POSIX socket
+
+CFLAGS += -Wall -m64 -fno-builtin -fsigned-char -pthread -fPIC -D_GNU_SOURCE -DPOSIX -DB_ENDIAN -I/usr/include/libxml2 -std=c99
+LDFLAGS += -m64 -L/opt/homebrew/opt/util-linux/lib -pthread
+
+LINT_SYSINCLUDE_DIRECTIVES = -i ./src/vos/posix -wlib 0 -DB_ENDIAN
+
