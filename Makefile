@@ -83,7 +83,6 @@ api/.SDTV2_BUILT:
 	cp -f config/$@ config/config.mk
 	cp -f ext_src/SDTv2/config/$(subst config,cfg,$@) ext_src/SDTv2/config/config.mk
 	cp -r ext_src/trdp/config/$@ ext_src/trdp/config/config.mk
-	git submodule init
 
 
 help:
